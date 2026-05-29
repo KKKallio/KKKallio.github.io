@@ -9,7 +9,7 @@ import publications from '@/data/publications';
 import experience from '@/data/researchExperience';
 
 export const metadata: Metadata = {
-  title: 'Resume',
+  title: "Kallio's Page | Resume",
   description: "Kallio's resume.",
 };
 
