@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           This personal page is adapted from{' '}
           <a href="https://github.com/mldangelo/personal-site">personal-site</a>
-          , while using clearer TypeScript data modules for profile content, research interests,
+          , while using data modules for profile content, research interests,
           publications, resume entries, and contact links.
         </p>
         <p>
