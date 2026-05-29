@@ -1,0 +1,22 @@
+name: Remove sensitive file from history
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Remove .env from history
+        run: |
+          git filter-branch --force --index-filter \
+          "git rm --cached --ignore-unmatch .env" \
+          --prune-empty --tag-name-filter cat -- --all
+          git push origin --force --all
