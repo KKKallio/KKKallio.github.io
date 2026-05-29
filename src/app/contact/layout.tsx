@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import '@/styles/page/about.css';
+import '@/styles/page/contact.css';
 
 export default function PageLayout({ children }: { children: ReactNode }) {
   return children;
