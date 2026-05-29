@@ -3,7 +3,7 @@ import Link from 'next/link';
 import ContactIcons from '@/components/About/ContactIcons';
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: "Kallio's Page | Contact",
   description: 'Contact Kallio.',
 };
 
