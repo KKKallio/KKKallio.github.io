@@ -3,7 +3,7 @@ import Link from 'next/link';
 import AboutSections from '@/components/About/AboutSections';
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: "Kallio's Page | About",
   description: "Kallio's About page.",
 };
 
