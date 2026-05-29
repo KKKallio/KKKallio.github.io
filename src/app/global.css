@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+
+@import '../styles/theme/color.css';
+@import '../styles/theme/font.css';
+@import '../styles/theme/spacing.css';
+@import '../styles/theme/motion.css';
+
+@import "../styles/layout/navigation.css";
+@import "../styles/layout/sidebar.css";
+@import "../styles/layout/main.css";
+@import "../styles/layout/section-nav.css";
+
+
+@import '../styles/dark-mode.css';
