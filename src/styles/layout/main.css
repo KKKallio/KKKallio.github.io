@@ -1,0 +1,126 @@
+/* Shared application shell and article rhythm. Page-specific rules live in src/styles/page/*.css. */
+html {
+  @apply scroll-smooth bg-bg;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+body {
+  @apply m-0 bg-bg font-sans text-base leading-normal text-fg antialiased;
+}
+
+.main-wrapper {
+  @apply mx-auto flex w-full max-w-6xl flex-col px-4 pb-16 pt-20;
+}
+
+.main-section {
+  @apply w-full min-w-0;
+}
+
+.post {
+  @apply mb-12 min-h-[calc(100vh-8rem)] bg-transparent;
+}
+
+.post > header {
+  @apply mb-8 border-b border-border pb-6;
+}
+
+.post > header .title h2 {
+  @apply m-0 font-heading text-2xl font-black uppercase tracking-[0.16em] text-fg-bold;
+}
+
+.post > header .title h2 a {
+  @apply text-fg-bold no-underline transition-colors duration-200;
+}
+
+.post > header .title h2 a:hover {
+  @apply text-accent;
+}
+
+.post > header .title > p {
+  @apply mt-3 max-w-2xl text-sm leading-normal text-fg-light;
+}
+
+.post h3 {
+  @apply mb-4 mt-10 border-b border-border pb-2 font-heading text-lg font-bold uppercase tracking-[0.14em] text-fg-bold;
+}
+
+.post h4 {
+  @apply mb-2 mt-5 font-heading text-base font-bold text-fg-bold;
+}
+
+.post p,
+.post li {
+  @apply text-base leading-normal text-fg;
+}
+
+.post ul,
+.post ol {
+  @apply my-4 pl-6;
+}
+
+.post li {
+  @apply mb-2;
+}
+
+.post a {
+  @apply text-fg-bold no-underline transition-colors duration-200;
+  background-image: linear-gradient(transparent calc(100% - 1.5px), var(--color-accent-underline) 1.5px);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.post a:hover {
+  @apply text-accent;
+  background-image: linear-gradient(transparent calc(100% - 1.5px), var(--color-accent) 1.5px);
+}
+
+.section-block,
+.section-heading-block {
+  @apply mb-6 rounded border border-border bg-bg-alt p-6 shadow-sm transition-shadow duration-200;
+}
+
+.section-block:hover {
+  @apply shadow-md;
+}
+
+.section-block > h3:first-child,
+.section-heading-block > h3:first-child {
+  @apply mt-0;
+}
+
+.inline-link-list {
+  @apply mt-5 flex flex-wrap gap-3;
+}
+
+.summary {
+  @apply mt-2 text-fg-light;
+}
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    @apply flex-row-reverse items-start justify-center gap-12 pt-20;
+  }
+
+  .main-section {
+    @apply max-w-3xl flex-1;
+  }
+
+  .post {
+    @apply p-0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-wrapper {
+    @apply px-5;
+  }
+
+  .post {
+    @apply p-0;
+  }
+}
+
+.home-site-card {
+  @apply max-w-3xl;
+}

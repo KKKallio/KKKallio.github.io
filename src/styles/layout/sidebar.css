@@ -1,0 +1,101 @@
+/* Sidebar: restrained profile column matching the upstream personal-site feel */
+.sidebar {
+  @apply w-full min-w-0 pt-8 text-left;
+}
+
+.sidebar img {
+  @apply mb-6 h-auto max-w-[12rem] rounded-[999px] border border-border bg-bg-alt;
+}
+
+.sidebar .name h2 {
+  @apply m-0 whitespace-nowrap font-heading text-lg font-black uppercase tracking-[0.1em] text-fg-bold;
+}
+
+.sidebar .hello {
+  @apply mt-4 text-sm leading-normal text-fg-light;
+}
+
+.sidebar a {
+  @apply text-fg-light no-underline transition-colors duration-200;
+}
+
+.sidebar a:hover {
+  @apply text-accent;
+}
+
+.sidebar .profile-icons,
+.sidebar footer .contact-icons {
+  @apply my-5 flex list-none flex-wrap gap-x-4 gap-y-3 p-0;
+}
+
+.sidebar .profile-icons li {
+  @apply m-0 inline-flex items-center gap-4 text-sm text-fg-light;
+}
+
+.sidebar footer .contact-icons li {
+  @apply m-0;
+}
+
+.sidebar .profile-icons svg,
+.sidebar footer .contact-icons svg {
+  @apply h-5 w-5 shrink-0;
+}
+
+.sidebar footer .contact-icons a {
+  @apply inline-flex items-center justify-center text-fg-light no-underline transition-colors duration-200;
+  background-image: none;
+}
+
+.sidebar footer .contact-icons a:hover,
+.sidebar footer .contact-icons a:focus-visible {
+  @apply text-accent;
+}
+
+.sidebar footer {
+  @apply mt-6 border-t border-border pt-6 text-xs text-fg-muted;
+}
+
+.sidebar footer p {
+  @apply mt-4 font-heading text-[0.65rem] font-bold uppercase tracking-[0.18em] text-fg-muted;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    @apply sticky top-20 w-52 min-w-[13rem] self-start pt-10;
+  }
+
+  .sidebar img {
+    @apply max-w-[9rem];
+  }
+
+  .sidebar .profile-icons,
+  .sidebar footer .contact-icons {
+    @apply flex flex-wrap;
+  }
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    @apply px-0 text-center;
+  }
+
+  .sidebar img {
+    @apply mx-auto;
+  }
+
+  .sidebar .name h2 {
+    @apply text-base;
+  }
+
+  .sidebar .profile-icons {
+    @apply justify-center;
+  }
+
+  .sidebar .profile-icons li {
+    @apply w-full justify-center gap-3 text-center;
+  }
+
+  .sidebar footer .contact-icons {
+    @apply justify-center;
+  }
+}
