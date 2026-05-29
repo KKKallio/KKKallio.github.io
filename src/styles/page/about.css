@@ -1,0 +1,30 @@
+@reference "../../app/global.css";
+
+/* About page modules and travel map. */
+.about-module {
+  @apply mb-6 rounded border border-border bg-bg-alt p-6 shadow-sm transition-shadow duration-200;
+}
+
+.about-module:hover {
+  @apply shadow-md;
+}
+
+.about-module > header > h3:first-child {
+  @apply mt-0;
+}
+
+.about-module header p {
+  @apply mt-2 text-fg-light;
+}
+
+.map-embed {
+  @apply mt-6 overflow-hidden rounded border border-border bg-bg shadow-sm;
+}
+
+.map-embed iframe {
+  @apply block h-80 w-full border-0;
+}
+
+.map-embed figcaption {
+  @apply border-t border-border bg-bg-alt p-3 text-sm text-fg-light;
+}

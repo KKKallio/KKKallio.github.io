@@ -1,0 +1,112 @@
+@reference "../../app/global.css";
+
+/* Resume-specific actions and experience layout. */
+.resume-actions {
+  @apply mt-5 flex flex-wrap gap-3;
+}
+
+.experience-item {
+  @apply border-b border-border py-4 last:border-b-0;
+}
+
+.experience-header {
+  @apply flex flex-col gap-2;
+}
+
+.experience-date {
+  @apply font-heading text-xs font-bold uppercase tracking-[0.16em] text-fg-muted;
+}
+
+@media (min-width: 768px) {
+  .experience-header {
+    @apply flex-row items-start justify-between gap-6;
+  }
+
+  .experience-date {
+    @apply mt-5 shrink-0 text-right;
+  }
+}
+
+/* Resume skills use a neutral chip with a category-colored shade,
+   mirroring the original personal-site skillbar behavior without making
+   the entire button colorful. */
+.skill-list {
+  @apply mt-4 flex flex-wrap items-center gap-2 text-sm text-fg-light;
+}
+
+.skill-list strong {
+  @apply mr-1 text-fg-bold;
+}
+
+.skill-tag {
+  position: relative;
+  align-items: center;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  box-shadow:
+    0 2px 8px rgba(0,0,0,0.08),
+    0 1px 2px rgba(0,0,0,0.04);
+  color: #222;
+  display: inline-flex;
+  padding: 0.52rem 1rem 0.52rem 1.2rem;
+  overflow: hidden;
+}
+
+.skill-tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(1);
+  width: 5px;
+  height: 120%;
+  border-radius: 999px;
+  background: var(--skill-color);
+
+  opacity: 1;
+}
+
+.skill-tag:hover {
+  border-color: color-mix(in srgb, var(--skill-shade) 42%, var(--color-border));
+  transform: translateY(var(--lift-sm));
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.skill-tag:hover::after {
+  opacity: 0.85;
+  transform: scaleX(1.04);
+}
+
+
+
+.experience-summary {
+  @apply mt-3 text-justify leading-relaxed text-fg-light;
+}
+
+.skill-tag-biology {
+  --skill-shade: var(--color-skill-1);
+  --skill-color: var(--color-skill-1);
+}
+
+.skill-tag-computational {
+  --skill-shade: var(--color-skill-2);
+  --skill-color: var(--color-skill-2);
+}
+
+.skill-tag-bioinformatics {
+  --skill-shade: var(--color-skill-5);
+  --skill-color: var(--color-skill-5);
+}
+
+.skill-tag-programming {
+  --skill-shade: var(--color-skill-6);
+  --skill-color: var(--color-skill-6);
+}
+
+.skill-tag-general {
+  --skill-shade: var(--color-skill-3);
+  --skill-color: var(--color-skill-3);
+}

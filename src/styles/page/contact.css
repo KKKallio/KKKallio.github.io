@@ -1,0 +1,24 @@
+@reference "../../app/global.css";
+
+/* Contact page call-to-action and icon grid. */
+.contact-card .contact-icons {
+  @apply my-6 flex list-none flex-wrap gap-5 p-0;
+}
+
+.contact-card .contact-icons li {
+  @apply m-0;
+}
+
+.contact-card .contact-icons a {
+  @apply inline-flex items-center justify-center text-fg-light no-underline transition-colors duration-200;
+  background-image: none;
+}
+
+.contact-card .contact-icons a:hover,
+.contact-card .contact-icons a:focus-visible {
+  @apply text-accent;
+}
+
+.contact-card .contact-icons svg {
+  @apply h-7 w-7;
+}
