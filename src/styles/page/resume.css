@@ -39,49 +39,22 @@
 }
 
 .skill-tag {
-  position: relative;
-  align-items: center;
-  background: rgba(255,255,255,0.96);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  box-shadow:
-    0 2px 8px rgba(0,0,0,0.08),
-    0 1px 2px rgba(0,0,0,0.04);
-  color: #222;
-  display: inline-flex;
-  padding: 0.52rem 1rem 0.52rem 1.2rem;
-  overflow: hidden;
+  @apply relative inline-flex items-center overflow-hidden rounded-xl border border-black/[0.08] bg-white/95 px-4 py-2 pl-5 text-fg shadow-sm;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
 }
-
 .skill-tag::before {
   content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(1);
-  width: 5px;
-  height: 120%;
-  border-radius: 999px;
+  @apply absolute left-0 top-0 h-[120%] w-[5px] rounded-full opacity-100;
   background: var(--skill-color);
-
-  opacity: 1;
 }
-
 .skill-tag:hover {
+  @apply -translate-y-[var(--lift-sm)];
   border-color: color-mix(in srgb, var(--skill-shade) 42%, var(--color-border));
-  transform: translateY(var(--lift-sm));
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, 0.12),
-    0 10px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12), 0 10px 24px rgba(0,0,0,0.08);
 }
-
 .skill-tag:hover::after {
-  opacity: 0.85;
-  transform: scaleX(1.04);
+  @apply opacity-85 scale-x-[1.04];
 }
-
-
-
 .experience-summary {
   @apply mt-3 text-justify leading-relaxed text-fg-light;
 }
